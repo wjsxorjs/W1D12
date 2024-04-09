@@ -88,10 +88,9 @@ public class Frame_Ex3 extends JFrame {
 			for(int i=0; i<ex_list.size(); i++) {
 				// 운석을 하나씩 가져온다.
 				Explosion_Ex3 ex = ex_list.get(i);
+				g.drawImage(exp_ar[ex.index], ex.pt.x, ex.pt.y, this);
 				if(ex.move_index()) {
 					ex_list.remove(ex);
-				} else {
-					g.drawImage(exp_ar[ex.index], ex.pt.x, ex.pt.y, this);
 				}
 				
 			}

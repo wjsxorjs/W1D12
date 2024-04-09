@@ -34,7 +34,7 @@ public class Meteor extends Thread {
 			if(rect.intersects(f.me.rect)) {
 				f.score -= 1;
 				f.title();
-				Explosion e = new Explosion(f.me.rect.x+(f.me.rect.width/2), f.me.rect.y, f);
+				Explosion e = new Explosion(f.me.rect.x+f.me.rect.width/2, f.me.rect.y, f);
 				f.e_list.add(e);
 				e.start();
 				break;

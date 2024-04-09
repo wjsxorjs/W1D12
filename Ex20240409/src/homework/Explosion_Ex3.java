@@ -15,7 +15,7 @@ public class Explosion_Ex3 {
 	// 배열에 접근하는 index값
 	int index;
 	int gap = 5; // 반복 수행이 gap만큼 돌 때 index증가
-	int interval = gap;
+	int interval = gap+1;
 	
 	public boolean move_index() {
 		if(interval == gap) {
