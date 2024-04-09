@@ -98,6 +98,7 @@ public class Frame_Ex3 extends JFrame {
 					
 					url_tf.setText(newPath);
 					checkUrl();
+					
 				}
 				
 				
