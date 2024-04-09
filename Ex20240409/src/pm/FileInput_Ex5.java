@@ -23,7 +23,11 @@ public class FileInput_Ex5 {
 			int size = -1;
 			
 			while((size=bis.read(buf))!= -1) {
-				System.out.write(buf, 0, size);
+				// 읽은 자원들은 모두 buf에 저장되고,
+				// 읽은 수는 size가 기억하고 있다.
+				// buf에 있는 내용을 가지고 문자역 객체를 생성
+				String str = new String(buf, 0, size);
+				System.out.println(str);
 			}
 			
 			
