@@ -117,22 +117,32 @@ public class Frame extends JFrame {
 				switch(code) {
 				case KeyEvent.VK_LEFT:
 					me.rect.x -= me.rect.width/2;
-					if(me.rect.x < 0) {
-						me.rect.x = 0;
-					}
-//					if(me.pos.x < 0) {
-//						me.pos.x = d.width-me.pos.width;
+//					if(me.rect.x < 0) {
+//						me.rect.x = 0;
 //					}
+					if(me.rect.x < 0) {
+						me.rect.x = d.width-me.rect.width;
+					}
+					if(b_list.size()<20) {
+						Bullet b1 = new Bullet(me.rect.x+(me.rect.width/2), me.rect.y, Frame.this);
+						b_list.add(b1);
+						b1.start();
+					}
 					break;
 					
 				case KeyEvent.VK_RIGHT:
 					me.rect.x += me.rect.width/2;
-					if(me.rect.x > d.width-me.rect.width) {
-						me.rect.x = d.width-me.rect.width;
-					}
-//					if(me.pos.x > d.width-me.pos.width) {
-//						me.pos.x = 0;
+//					if(me.rect.x > d.width-me.rect.width) {
+//						me.rect.x = d.width-me.rect.width;
 //					}
+					if(me.rect.x > d.width-me.rect.width) {
+						me.rect.x = 0;
+					}
+					if(b_list.size()<20) {
+						Bullet b2 = new Bullet(me.rect.x+(me.rect.width/2), me.rect.y, Frame.this);
+						b_list.add(b2);
+						b2.start();
+					}
 					break;
 					
 				case KeyEvent.VK_SPACE:
