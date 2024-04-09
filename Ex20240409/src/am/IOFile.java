@@ -9,7 +9,8 @@ public class IOFile {
 	
 	---------------------------------------- * ----------------------------------------------
 	
-	Stream의 종류
+	Stream의 종류														InputStream으로부터 상속받아서 이걸 이해했다면
+																						해당 함수를 제대로 사용할 수 있다.
 	  * 바이트 기반 스트림 ( ...InputStream / ...OutputStream / )  <--- ** read() : 1byte를 읽는다.
 	  						 											** read(byte[]) <- 가장 알아야 할 함수
 	  																	** read(byte[], int off, int len);

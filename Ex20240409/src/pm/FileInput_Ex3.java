@@ -21,13 +21,15 @@ public class FileInput_Ex3 {
 			try {
 				fis = new FileInputStream(f);
 				int data = -1;
-				
+				int count = 0;
 				// 파일로부터 더 이상 읽을 것이 없을 때까지 반복처리한다.
 				
 				while((data = fis.read()) != -1) { // EOF(End Of File)의 값이 -1이다.
 					System.out.print((char)data);
+					count++;
 				}
-				
+				System.out.println();
+				System.out.println(count+"회 반복");
 //				fis.close(); // 스트림 닫기 | 좋지 않은 방법
 				
 			} catch (FileNotFoundException e) {
